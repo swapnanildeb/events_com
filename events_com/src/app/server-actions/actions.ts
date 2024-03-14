@@ -31,13 +31,14 @@ export async function checkLogin(
   }
 
   const data = parse.data;
+
   cookies().set({
     name: 'username',
     value: data.username,
     auth: true,
     sameSite: 'lax'
   })
-  redirect('/user')
+  redirect('/dashboard/user')
   console.log(data)
 
 }
